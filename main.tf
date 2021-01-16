@@ -4,16 +4,16 @@
 
 # creation of the rule
 
-resource "azurerm_network_security_rule" "Terra-NSGRule" {
-  name                         = var.NSGRuleName
-  priority                     = var.NSGRulePriority
-  direction                    = var.NSGRuleDirection
-  access                       = var.NSGRuleAccess
-  protocol                     = var.NSGRuleProtocol
-  source_port_range            = var.NSGRuleSourcePortRange
-  destination_port_ranges      = var.NSGRuleDestinationPortRanges
-  source_address_prefixes      = var.NSGRuleSourceAddressPrefixes
-  destination_address_prefixes = var.NSGRuleDestinationAddressPrefixes
+resource "azurerm_network_security_rule" "TerraNsgRule" {
+  name                         = var.NsgRuleName
+  priority                     = var.NsgRulePriority
+  direction                    = var.NsgRuleDirection
+  access                       = var.NsgRuleAccess
+  protocol                     = var.NsgRuleProtocol
+  source_port_range            = var.NsgRuleSourcePortRange
+  destination_port_ranges      = var.NsgRuleDestinationPortRanges
+  source_address_prefixes      = var.NsgRuleSourceAddressPrefixes
+  destination_address_prefixes = var.NsgRuleDestinationAddressPrefixes
   resource_group_name          = var.RgName
-  network_security_group_name  = var.NSGReference
+  network_security_group_name  = var.NsgName
 }

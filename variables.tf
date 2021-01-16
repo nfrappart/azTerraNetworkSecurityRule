@@ -11,54 +11,54 @@ variable "RgName" {
 }
 
 #The NSG rule requires a reference to a NSG
-variable "NSGReference" {
+variable "NsgName" {
   type = string
 }
 
 #The NSG Rule Name, a string value allowing to identify the rule after deployment
-variable "NSGRuleName" {
+variable "NsgRuleName" {
   type    = string
-  default = "DefaultNSGRule"
+  default = "DefaultNsgRule"
 }
 
-#The NSG rule priority is an integer value defining the priority in which the rule is applyed in the NSG
+#The NSG rule priority is an integer value defining the priority in which the rule is applyed in the Nsg
 variable "NSGRulePriority" {
   type = string
 }
 
 #The NSG rule direction define if the rule is for ingress or egress trafic. Allowed value are inbound and outbound
-variable "NSGRuleDirection" {
+variable "NsgRuleDirection" {
   type = string
 }
 
 #The NSG Rule Access value,  a string value defining if the rule allow or block the specified traffic. Accepted value are Allow or Block
-variable "NSGRuleAccess" {
+variable "NsgRuleAccess" {
   type    = string
   default = "Allow"
 }
 
 #The NSG rule protocol define which type of trafic to allow/block. It accept the string tcp, udp, icmp or *
-variable "NSGRuleProtocol" {
+variable "NsgRuleProtocol" {
   type = string
 }
 
 #The NSG rule source port range define the port(s) from which the trafic origing is allowed/blocked
-variable "NSGRuleSourcePortRange" {
+variable "NsgRuleSourcePortRange" {
   type    = string
   default = "*"
 }
 
 #The NSG rule destination port range define the port(s) on which the trafic destination is allowed/blocked
-variable "NSGRuleDestinationPortRanges" {
+variable "NsgRuleDestinationPortRanges" {
   type = list
 }
 
 #The NSG rule address preifx defines the source address(es) from whichthe trafic origin is allowed/blocked
-variable "NSGRuleSourceAddressPrefixes" {
+variable "NsgRuleSourceAddressPrefixes" {
   type = list
 }
 
 #The NSG rule address preifx defines the source address(es) from whichthe trafic origin is allowed/blocked
-variable "NSGRuleDestinationAddressPrefixes" {
+variable "NsgRuleDestinationAddressPrefixes" {
   type = list
 }
