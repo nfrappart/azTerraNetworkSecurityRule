@@ -43,7 +43,7 @@ variable "SrcPortRange" {
 
 #The NSG rule destination port range define the port(s) on which the trafic destination is allowed/blocked
 variable "DstPortRange" {
-  type = list
+  type = string
 }
 
 #The NSG rule address preifx defines the source address(es) from whichthe trafic origin is allowed/blocked
