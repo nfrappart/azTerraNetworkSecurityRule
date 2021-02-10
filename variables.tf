@@ -48,10 +48,10 @@ variable "DstPortRange" {
 
 #The NSG rule address preifx defines the source address(es) from whichthe trafic origin is allowed/blocked
 variable "SrcAddrPrefixes" {
-  type = list
+  type = string
 }
 
 #The NSG rule address preifx defines the source address(es) from whichthe trafic origin is allowed/blocked
 variable "DstAddrPrefixes" {
-  type = list
+  type = string
 }
